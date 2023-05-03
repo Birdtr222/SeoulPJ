@@ -1,9 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
+// 작성자 : 정혜윤, 이주빈, 기능 : 메인 사진 불러오기, 일자: 05.03
 import background from "./assets/background.jpg"
 import cafe from "./assets/cafe.jpg"
 import cafe2 from "./assets/cafe2.jpg"
-
+// <--작성자 : 정혜윤, 이주빈, 기능 : 메인 사진 불러오기, 일자: 05.03-->
 
 export default function App() {
   //return 구문 밖에서는 슬래시 두개 방식으로 주석
@@ -12,8 +13,9 @@ export default function App() {
       return 구문 안에서는 {슬래시 + * 방식으로 주석
     */
     <ScrollView style={styles.mainImage}>
+      {/* 작성자 : 정혜윤, 이주빈, 기능 : 상단 로고 이름, 일자 : 05.03 */}
       <Text style={styles.title}>걸어요, 서울</Text>
-
+      {/* 작성자 : 정혜윤, 이주빈, 기능 : 상단 배너, 일자 : 05.03 */}
       <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
         <TouchableOpacity style={styles.middleButton01}><Text style={styles.middleButtonText}>인기코스</Text></TouchableOpacity>
         <TouchableOpacity style={styles.middleButton02}><Text style={styles.middleButtonText}>지도</Text></TouchableOpacity>
@@ -21,6 +23,8 @@ export default function App() {
         <TouchableOpacity style={styles.middleButton04}><Text style={styles.middleButtonText}>MBTI</Text></TouchableOpacity>
         <TouchableOpacity style={styles.middleButton05}><Text style={styles.middleButtonText}>커뮤니티</Text></TouchableOpacity>
       </ScrollView>
+
+      {/* 작성자 : 정혜윤, 이주빈, 기능 : 이미지, 일자 : 05.03, 추후 수정 예정 */}
       <Image 
         source={background}
         resizeMode={"contain"}
