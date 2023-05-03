@@ -1,56 +1,213 @@
-import { StatusBar } from 'expo-status-bar';
-import Constants from 'expo-constants'; // (작성자 : 류정인, 기능 : 안드로이드 상단 상태바 비우기, 일자: 05.01)
-import React, {useState} from 'react'; // import (작성자 : 류정인,기능 : 좋아요 버튼, 일자: 05.01)
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
+import background from "./assets/background.jpg"
+import cafe from "./assets/cafe.jpg"
+import cafe2 from "./assets/cafe2.jpg"
+
 
 export default function App() {
-  // 작성자 류정인, 기능 : 좋아요 버튼 함수, 일자 : 05.01
-  const [count, setCount] = useState(0);
-  const onPress = () => setCount(prevCount => prevCount + 1);
-  
+  //return 구문 밖에서는 슬래시 두개 방식으로 주석
   return (
-    <View style={styles.safeArea}>
-      <View style={styles.container}>
-        <Text>push test를 위한 메세지 입니다. 얍얍 혜윤언니 컴퓨터다</Text>
-        <StatusBar style="auto" />
-        {/* 작성자 : 류정인, <View style containerOne>, 기능 : 이미지 업로드 버튼 구현 x, 좋아요 버튼 누르면 숫자 올라감, reload 시 0으로 초기화되므로 다시 고민해볼 예정, 작성 일자 : 05.01 */}
-        <View style={styles.containerOne}>
-          <TouchableOpacity style={styles.ImagebuttonOne}>
-          <Text style>이미지 업로드 버튼</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.ImagebuttonTwo} onPress={onPress} >
-          <Text style> Count : {count} </Text>
-          </TouchableOpacity>
+    /*
+      return 구문 안에서는 {슬래시 + * 방식으로 주석
+    */
+    <ScrollView style={styles.mainImage}>
+      <Text style={styles.title}>걸어요, 서울</Text>
+
+      <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
+        <TouchableOpacity style={styles.middleButton01}><Text style={styles.middleButtonText}>인기코스</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.middleButton02}><Text style={styles.middleButtonText}>지도</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.middleButton03}><Text style={styles.middleButtonText}>날씨</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.middleButton04}><Text style={styles.middleButtonText}>MBTI</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.middleButton05}><Text style={styles.middleButtonText}>커뮤니티</Text></TouchableOpacity>
+      </ScrollView>
+      <Image 
+        source={background}
+        resizeMode={"contain"}
+        style={styles.imageStyle}/>
+      <View style={styles.cardContainer}>
+        {/* 하나의 카드 영역을 나타내는 View */}
+        <View style={styles.card}>
+        <Image 
+        source={cafe}
+        style={styles.middleContainer}/>
+          <View style={styles.cardText}>
+            <Text style={styles.cardTitle}>HOT PLACE!!!</Text>
+            <Text style={styles.cardDesc} numberOfLines={3}>친구, 연인이랑 가기 좋은 요즘 핫한 인스타 감성 카페들을 소개합니다.
+커피맛 뿐만 아니라 맛있는 디저트도 빼놓을 수 없죠? </Text>
+            <Text style={styles.cardDate}>2020.09.09</Text>
+          </View>
         </View>
+        
       </View>
-    </View>
+      <View style={styles.cardContainer}>
+        {/* 하나의 카드 영역을 나타내는 View */}
+        <View style={styles.card}>
+        <Image 
+        source={cafe2}
+        style={styles.cardContainer}/>
+          <View style={styles.cardText}>
+    
+            <Text style={styles.cardTitle}>HOT PLACE!!!</Text>
+            <Text style={styles.cardDesc} numberOfLines={3}>친구, 연인이랑 가기 좋은 요즘 핫한 인스타 감성 카페들을 소개합니다.
+커피맛 뿐만 아니라 맛있는 디저트도 빼놓을 수 없죠? </Text>
+            <Text style={styles.cardDate}>2020.09.09</Text>
+          </View>
+        </View>
+        
+      </View>
+      <View style={styles.cardContainer}>
+        {/* 하나의 카드 영역을 나타내는 View */}
+        <View style={styles.card}>
+          <Image style={styles.cardImage} source={{uri:"https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2Fpizza.png?alt=media&token=1a099927-d818-45d4-b48a-7906fd0d2ad3"}}/>
+          <View style={styles.cardText}>
+            <Text style={styles.cardTitle}>HOT PLACE!!!</Text>
+            <Text style={styles.cardDesc} numberOfLines={3}>친구, 연인이랑 가기 좋은 요즘 핫한 인스타 감성 카페들을 소개합니다.
+커피맛 뿐만 아니라 맛있는 디저트도 빼놓을 수 없죠? </Text>
+            <Text style={styles.cardDate}>2020.09.09</Text>
+          </View>
+        </View>
+        
+      </View>
+      <View style={styles.cardContainer}>
+        {/* 하나의 카드 영역을 나타내는 View */}
+        <View style={styles.card}>
+          <Image style={styles.cardImage} source={{uri:"https://firebasestorage.googleapis.com/v0/b/sparta-image.appspot.com/o/lecture%2Fpizza.png?alt=media&token=1a099927-d818-45d4-b48a-7906fd0d2ad3"}}/>
+          <View style={styles.cardText}>
+            <Text style={styles.cardTitle}>HOT PLACE!!!</Text>
+            <Text style={styles.cardDesc} numberOfLines={3}>친구, 연인이랑 가기 좋은 요즘 핫한 인스타 감성 카페들을 소개합니다.
+커피맛 뿐만 아니라 맛있는 디저트도 빼놓을 수 없죠? </Text>
+            <Text style={styles.cardDate}>2020.09.09</Text>
+          </View>
+        </View>
+        
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-    paddingTop: Constants.statusBarHeight
-  },
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignContent: 'center',
+    //앱의 배경 색
+    backgroundColor: '#e8f6ff',
   },
-  containerOne:{
-    flex : 1,
-    backgroundColor: '#AFD3E2',
+  title: {
+    //폰트 사이즈
+    fontSize: 30,
+    //폰트 두께
+    fontWeight: '700',
+    //위 공간으로 부터 이격
+    marginTop:50,
+       //왼쪽 공간으로 부터 이격'
+    marginLeft:20
   },
-  ImagebuttonOne: {
-    height:20,
-    backgroundColor:'#19A7CE',
+  mainImage: {
+    //컨텐츠의 넓이 값
+    width:'90%',
+    //컨텐츠의 높이 값
+    height:200,
+    //컨텐츠의 모서리 구부리기
     borderRadius:10,
-    margin:20,
+    marginTop:20,
+    //컨텐츠 자체가 앱에서 어떤 곳에 위치시킬지 결정(정렬기능)
+    //각 속성의 값들은 공식문서에 고대로~ 나와 있음
+    alignSelf:"center"
   },
-  ImagebuttonTwo: {
-    height:20,
-    backgroundColor:'#19A7CE',
+  middleContainer:{
+    width:'90%',
+    height:200,
+    marginTop:10,
+    marginLeft:10
+  },
+  middleButton01: {
+    width:100,
+    height:50,
+    padding:15,
+    backgroundColor:"#a6dbff",
+    borderColor:"deeppink",
+    borderRadius:15,
+    margin:7
+  },
+  middleButton02: {
+    width:100,
+    height:50,
+    padding:15,
+    backgroundColor:"#79c9ff",
+    borderRadius:15,
+    margin:7
+  },
+  middleButton03: {
+    width:100,
+    height:50,
+    padding:15,
+    backgroundColor:"#4db7ff",
+    borderRadius:15,
+    margin:7
+  },
+  middleButton04: {
+    width:100,
+    height:50,
+    padding:15,
+    backgroundColor:"#21a6ff",
+    borderRadius:15,
+    margin:7
+  },
+  middleButton05: {
+    width:100,
+    height:50,
+    padding:15,
+    backgroundColor:"#1a84cc",
+    borderRadius:15,
+    margin:7
+  },
+  middleButtonText: {
+    color:"#fff",
+    fontWeight:"700",
+    //텍스트의 현재 위치에서의 정렬 
+    textAlign:"center"
+  },
+  cardContainer: {
+    width:'90%',
+    height:200,
+    marginTop:10,
+    marginLeft:10,
+    margin:100,
+    padding:10
+
+  },
+  card:{
+    flex:1,
+    //컨텐츠들을 가로로 나열
+    //세로로 나열은 column <- 디폴트 값임 
+    flexDirection:"row",
+    margin:10,
+    borderBottomWidth:0.5,
+    borderBottomColor:"#eee",
+    paddingBottom:10
+
+  },
+  cardImage: {
+    flex:1,
+    width:100,
+    height:100,
     borderRadius:10,
-    margin:20,
   },
+  cardText: {
+    flex:2,
+    flexDirection:"column",
+    marginLeft:10,
+  },
+  cardTitle: {
+    fontSize:20,
+    fontWeight:"700"
+  },
+  cardDesc: {
+    fontSize:15
+  },
+  cardDate: {
+    fontSize:10,
+    color:"#A6A6A6",
+  }
+
+
 });
