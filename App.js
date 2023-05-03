@@ -11,7 +11,7 @@ export default function App() {
   return (
     <View style={styles.safeArea}>
       <View style={styles.container}>
-        <Text>push test를 위한 메세지 입니다. [작성일자 23.05.03]</Text>
+        <Text>push test를 위한 메세지 입니다. 바꿔져라 얍</Text>
         <StatusBar style="auto" />
         {/* 작성자 : 류정인, <View style containerOne>, 기능 : 이미지 업로드 버튼 구현 x, 좋아요 버튼 누르면 숫자 올라감, reload 시 0으로 초기화되므로 다시 고민해볼 예정, 작성 일자 : 05.01 */}
         <View style={styles.containerOne}>
