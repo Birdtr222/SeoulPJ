@@ -4,15 +4,15 @@ import { Image, TouchableOpacity, Pressable, ScrollView, StyleSheet, Text, View 
 import Constants from 'expo-constants';
 
 //이미지 불러오기
-import house from "./assets/icons/house.png"
-import maps from "./assets/icons/maps.png"
-import moviesApp from "./assets/icons/moviesApp.png"
-import settings from "./assets/icons/settings.png"
-import cafe from "./assets/cafe.jpg"
+import house from "../assets/icons/house.png"
+import maps from "../assets/icons/maps.png"
+import moviesApp from "../assets/icons/moviesApp.png"
+import settings from "../assets/icons/settings.png"
+import cafe from "../assets/cafe.jpg"
 
 
 
-export default function App() {
+export default function Mainpage() {
   return (
     <View style={styles.safeArea}> 
     <View style={styles.container}>
@@ -67,8 +67,6 @@ export default function App() {
   );
 }
 
-// styles 변수 이름 답게 화면을 그려주는, 
-//더 자세히는 JSX문법을 꾸며주는 내용을 담고 있습니다.
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
@@ -90,10 +88,8 @@ const styles = StyleSheet.create({
   mainImage:{
     flex:1,
     width:'100%',
-    //컨텐츠의 높이 값
     marginTop:5,
     height: 300,
-    //컨텐츠의 모서리 구부리기
     borderRadius:10,
     alignSelf:"center"
   },
