@@ -1,19 +1,46 @@
 import { StatusBar } from 'expo-status-bar';
-import React, {useState} from 'react';
+import React, {useState, useEffect } from 'react';
 import { Image, TouchableOpacity, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Constants from 'expo-constants';
+// 로딩 페이지
+import Loading from './Loading';
 
 //이미지 불러오기
-import house from "../assets/icons/house.png"
-import maps from "../assets/icons/maps.png"
-import moviesApp from "../assets/icons/moviesApp.png"
-import settings from "../assets/icons/settings.png"
-import cafe from "../assets/cafe.jpg"
+import house from "../assets/icons/house.png";
+import maps from "../assets/icons/maps.png";
+import moviesApp from "../assets/icons/moviesApp.png";
+import settings from "../assets/icons/settings.png";
+import cafe from "../assets/cafe.jpg";
 
+//데이터 불러오기
+// import data from "../data.json";
 
 
 export default function Mainpage() {
-  return (
+  // let tip = data.tip
+  let todayWeather = 10+ 17;
+  let todayCondition = "흐림"
+
+  /* *** 강의 3주차 41:21, useState 사용방법
+  [state, setState] > state 관리될 상태 데이터를 담고, setState는 state를 변경시킬때 사용하는 함수
+  
+  useState()안에 전달되는 값은 state 초기값
+  */
+  //  //const [첫번째 변수명 : 사용할 상태 변수, 두번째 변수 : 상태 변수들어있는 것을 수정, 변경할때 쓰는 것]
+  // const [state, setState] = useState([])
+  const [ready, setReady] = useState(true)
+
+  useEffect( () => {
+    // 1초 뒤에 실행되는 코드들이 담겨 있 함수,
+    // 1000 = 1초
+    setTimeout(()=>{
+      // setState(data)
+      setReady(false)
+    },1000)
+  },[])
+
+
+  return ready ? <Loading/> : (
     <View style={styles.safeArea}> 
     <View style={styles.container}>
       {/*배너 부분 작성자 :류정인
