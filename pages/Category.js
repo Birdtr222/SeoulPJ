@@ -34,6 +34,12 @@ const HEIGHT = Dimensions.get('window').height;
 
 export default function Category() {
 
+
+
+
+
+
+
     const [imgActive, setimgActive] = useState(0);
   onchange = (nativeEvent) => {
     if(nativeEvent){
@@ -165,7 +171,8 @@ const styles = StyleSheet.create({
     },
     textcontain:{
         fontSize:20,
-        fontWeight:'bold'
+        fontWeight:'bold',
+
     },
 
     container01:{
