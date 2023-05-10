@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Component } from 'react';
-import { Dimensions, TouchableOpacity, StyleSheet, Text, View, ScrollView } from 'react-native';
+import { Alert, Dimensions, TouchableOpacity, StyleSheet, Text, View, ScrollView } from 'react-native';
+import * as Location from "expo-location"
 
 
 //아이콘 가져오기
@@ -13,7 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 const screenWidth = Dimensions.get('window').width
 
 
-export default function Searchpage() {
+export default function Searchpage () {
     //스크린 사이즈에 맞게 설정
 
     return (
