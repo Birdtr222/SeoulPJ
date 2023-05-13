@@ -13,9 +13,9 @@ export default class App extends Component{
   // return (<Loading/>);
   // return (<MainHubo/>);
   // return (<Mainpage/>)
-  return (<Searchpage/>);
+  // return (<Searchpage/>);
   // return (<Category/>);
   // return (<Detailpage/>);
-  // return (<Mappage/>)
+  return (<Mappage/>)
   }
 }
