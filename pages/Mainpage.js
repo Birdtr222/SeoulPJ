@@ -1,14 +1,27 @@
 import React, { useState, useEffect, Component } from 'react';
 import { Dimensions, TouchableOpacity, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import * as Location from "expo-location"
+import axios from "axios"
 
 
 //아이콘 가져오기
+import { Fontisto, MaterialCommunityIcons, FontAwesome5, Foundation, Ionicons } from '@expo/vector-icons';
+
+
 //날씨
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { Foundation } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
+
+const icons = {
+    Clouds: "cloudy",
+    Clear: "day-sunny",
+    Atmosphere: "cloudy-gusts",
+    Snow: "snow",
+    Rain: "rains",
+    Drizzle: "rain",
+    Thunderstorm: "lightning",
+    Mist : "cloudy-gusts"
+    }
+
 
 //이미지 불러오기
 import cafe from '../assets/cafe.jpg';
@@ -17,8 +30,34 @@ import cafe from '../assets/cafe.jpg';
 //그라데이션 적용할 사이즈
 const screenWidth = Dimensions.get('window').width
 
-export default function Mainpage() {
-    //스크린 사이즈에 맞게 설정
+// API_KEY
+const Weather_API_KEY = "cfc258c75e1da2149c33daffd07a911d";
+
+export default function Mainpage({navigation,route}) {
+    
+    // 날씨
+  const [days, setDays] = useState({temp : 0,  condition : ''});
+
+  // 날씨 가져오기
+  const getWeather = async() => {
+    // 위도 경도 가져오기
+    const {coords:{latitude, longitude}} = await Location.getCurrentPositionAsync({accuracy:5});
+
+    const result = await axios.get(
+        `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${Weather_API_KEY}&lang={kr}&units=metric`
+      );
+
+    const temp = result.data.main.temp; 
+    const condition = result.data.weather[0].main
+
+    setDays({
+        temp, condition
+    });
+  }
+
+  useEffect(() => {
+    getWeather();
+    },[]);
 
     return (
 
@@ -28,8 +67,8 @@ export default function Mainpage() {
         <LinearGradient colors={['rgba(0,0,0,0.8)', 'transparent','transparent','rgba(0,0,0,0.8)']} style={styles.background}>
         <View style={styles.header}>
             <View style={styles.headercontent01}><Text style={styles.texttitle}>걸어요, 서울</Text></View>
-            <View style={styles.headercontent02}><Text style={styles.textweather}>16 °C</Text></View>
-            <View style={styles.weatherArea}><MaterialCommunityIcons name="weather-cloudy" size ={36} color={'white'}/></View></View>
+            <View style={styles.headercontent02}><Text style={styles.textweather}>{parseFloat(days.temp).toFixed(0)} °C</Text></View>
+            <View style={styles.weatherArea}><Fontisto name={icons[days.condition]} size ={20} color={'white'}/></View></View>
         <View style={styles.title}>
             <View style={styles.Content01}><Text style={styles.text}>오늘의 추천 산책로</Text></View></View>
         <View style={styles.Content}></View>
@@ -45,6 +84,7 @@ export default function Mainpage() {
                 <FontAwesome5 name="home" size={30} color="white" />
             </TouchableOpacity>
             <TouchableOpacity>
+            {/* <TouchableOpacity onPress={()=>{navigation.navigate('Searchpage')}}> */}
                 <FontAwesome5 name="search" size={30} color="white" />
             </TouchableOpacity>
             <TouchableOpacity>
@@ -61,6 +101,7 @@ export default function Mainpage() {
 const styles = StyleSheet.create({
     container:{
         flex:1,
+        marginTop:30,
         backgroundColor :'yellow',
         height:screenWidth
     },
@@ -105,7 +146,9 @@ const styles = StyleSheet.create({
     weatherArea:{
         flex:0.5,
         alignContent:'flex-end',
-        marginRight:30
+        justifyContent:'center',
+        marginRight:30,
+        marginBottom: 10,
     },
     title:{
         flex:11,

@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
-import Loading from './pages/Loading.js';
-import Mainpage from './pages/Mainpage.js';
-import MainHubo from './pages/MainHubo.js';
-import Searchpage from './pages/Searchpage.js';
-import Category from './pages/Category.js';
+
+import {NavigationContainer} from '@react-navigation/native';
+import StackNavigator from './pages/StackNavigator.js'
+
+import Mainpage from './pages/Mainpage.js'
 import Detailpage from './pages/Detailpage.js'
-import Mappage from './pages/Mappage.js';
+import Mappage from './pages/Mappage.js'
+import Searchpage from './pages/Searchpage.js';
 
 export default class App extends Component{
   render(){
-  // ruturn (<Mappage/>);
+  // return (<Mappage/>);
   // return (<Loading/>);
-  // return (<MainHubo/>);
-  // return (<Mainpage/>)
-  // return (<Searchpage/>);
+  return (<Mainpage/>)
+  //  return (<Searchpage/>);
   // return (<Category/>);
   // return (<Detailpage/>);
-  return (<Mappage/>)
+  // return (<Mappage/>)
+  // return (<JBMappage/>)
+  // <NavigationContainer>
+  //   <StackNavigator/>
+  // </NavigationContainer>;
   }
 }
