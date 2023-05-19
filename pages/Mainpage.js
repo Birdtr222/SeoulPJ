@@ -84,7 +84,7 @@ export default function Mainpage({navigation,route}) {
                 <FontAwesome5 name="home" size={30} color="white" />
             </TouchableOpacity>
             <TouchableOpacity>
-            {/* <TouchableOpacity onPress={()=>{navigation.navigate('Searchpage')}}> */}
+            {/* <TouchableOpacity onPress={()=>{navigation.navigation('Searchpage')}}> */}
                 <FontAwesome5 name="search" size={30} color="white" />
             </TouchableOpacity>
             <TouchableOpacity>

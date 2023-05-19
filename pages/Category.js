@@ -33,13 +33,6 @@ const HEIGHT = Dimensions.get('window').height;
 
 
 export default function Category() {
-
-
-
-
-
-
-
     const [imgActive, setimgActive] = useState(0);
   onchange = (nativeEvent) => {
     if(nativeEvent){

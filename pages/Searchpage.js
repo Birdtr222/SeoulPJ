@@ -76,7 +76,6 @@ export default function Searchpage ({navigation, route}) {
     const result = await axios.get(
         `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${Weather_API_KEY}&lang={kr}&units=metric`
       );
- 
       const temp = result.data.main.temp; 
       const condition = result.data.weather[0].main
 
