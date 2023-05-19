@@ -1,0 +1,18 @@
+{
+    "data" : {
+"sildes1": [
+    'https://as1.ftcdn.net/v2/jpg/02/25/80/28/1000_F_225802838_2KbIbVqBHdmqnYvr6RpDjQcCyNy9BHR3.jpg',
+    'https://as2.ftcdn.net/v2/jpg/01/80/99/79/1000_F_180997980_t7guTO143h8FwC7YRIXKJjTZVxXApdeZ.jpg',
+    'https://as2.ftcdn.net/v2/jpg/02/91/23/15/1000_F_291231531_kwS5iNi5r3FgJMQD06hYeAT95MZ2sV7T.jpg',
+    'https://as2.ftcdn.net/v2/jpg/01/99/89/27/1000_F_199892726_UMrrpAC4aMiouqbCJuIgVlrRQH9s2gXM.jpg'
+  ],
+  
+ "sildes2": [
+  
+    'https://images.pexels.com/photos/2848492/pexels-photo-2848492.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    'https://cdn.pixabay.com/photo/2015/10/17/15/54/seoul-olympic-park-992727_960_720.jpg',
+    'https://cdn.pixabay.com/photo/2018/10/16/02/20/wallpapers-3750472_960_720.jpg',
+    'https://cdn.pixabay.com/photo/2018/11/02/21/50/south-korea-3791154_960_720.jpg'
+  ]
+}
+}

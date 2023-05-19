@@ -1,23 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Push test를 위한 메세지 입니다.</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import {NavigationContainer} from '@react-navigation/native';
+import StackNavigator from './pages/StackNavigator.js'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  textstyle:{
-    // test를 위한 주석
+
+import Mainpage from './pages/Mainpage.js'
+import Detailpage from './pages/Detailpage.js'
+import Mappage from './pages/Mappage.js'
+import Searchpage from './pages/Searchpage.js';
+import Category from './pages/Category.js';
+import Data from './pages/Datas.js'
+
+export default class App extends Component{
+  render(){
+  // return (<Mappage/>);
+  // return (<Loading/>);
+  return (<Mainpage/>)
+  // return (<Searchpage/>);
+  // return (<Category/>);
+  // return (<Detailpage/>);
+  // return (<Mappage/>)
+  // return (<JBMappage/>)
+  // return (<Data/>)
+  // <NavigationContainer>
+  //   <StackNavigator/>
+  // </NavigationContainer>;
   }
-});
+}
