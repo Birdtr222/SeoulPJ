@@ -15,8 +15,8 @@ export default class App extends Component{
   render(){
   // return (<Mappage/>);
   // return (<Loading/>);
-  return (<Mainpage/>)
-  // return (<Searchpage/>);
+  // return (<Mainpage/>)
+  return (<Searchpage/>);
   // return (<Category/>);
   // return (<Detailpage/>);
   // return (<Mappage/>)
