@@ -9,6 +9,10 @@
 // // import Searchpage from './pages/Searchpage.js';
 
 
+// 작성자 : 홍세은
+// 날짜 : 05.18
+// 기능 : 네비게이션 기능
+
 // // function Mainpage({ navigation }) {
 // // return (
 // //     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>

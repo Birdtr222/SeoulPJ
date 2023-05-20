@@ -1,3 +1,8 @@
+// 작성자 : 신동환,
+// 작성일자 : 05. 08,
+// 기능 : 지도 보여주기
+
+
 import React from 'react';
 import MapView, { Marker, Polyline  } from 'react-native-maps';
 import { StyleSheet, View } from 'react-native';

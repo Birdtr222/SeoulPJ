@@ -102,7 +102,7 @@ export default function Searchpage () {
 
   // 검색창 공란으로 변하기
   const [txt, onChangeTXT] = React.useState('');
-  
+
     return (
     <View style ={styles.container}>    
         {/* 날씨 이모티콘 */}
@@ -127,7 +127,7 @@ export default function Searchpage () {
                 {/* <ActivityIndicator color={"white"} size={"large"}/> */}
                 {/* 데이터 나오는 곳 */}
                 {/* 이미지 데이터는 잘 불러와지는데, 이미지가 안나옴 */}
-                <Text>{data.imgSrc} </Text>
+                <Text> {data.imgSrc} </Text>
                 <Image source={{uri: "https://culture.seoul.go.kr/cmmn/file/getImage.do?atchFileId=6a59720cd9c34bbfa056eb6b5031f809&thumb=Y"}}/>
                 <Text style={{fontSize:100,}}>호호호 </Text>
             </ScrollView>
