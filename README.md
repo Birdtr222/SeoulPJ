@@ -1,13 +1,7 @@
-## 서울 공공데이터 경진대회
-
-
-
+## 서울 공공데이터 경진대회 ##
 팀장 : 류정인
-팀원 : 신동환, 이주빈, 정혜윤, 홍세은  
-
-
-
-
+팀원 : 신동환, 이주빈, 정혜윤, 홍세은
+프로젝트 기간 : 4월 16일 ~ 5월 22일 (종료)
 
 목표 : 건강하고 안전한 라이프 스타일을 위한 우리 동네 안심산책 어플
 -----------------------------------------------------------------------------
@@ -21,5 +15,7 @@
 ----------------------------------------------------------------------------
 <div align=center>
   <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
-  <img src="https://img.shields.io/badge/Expo-61DAFB?style=for-the-badge&logo=Expo&logoColor=black">
+  <img src="https://img.shields.io/badge/expo-000020?style=for-the-badge&logo=expo&logoColor=black">
+  <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black">
 </div>
+
