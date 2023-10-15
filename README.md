@@ -11,7 +11,7 @@
 <img width="363" alt="KakaoTalk_20230926_104327092" src="https://github.com/Birdtr222/SeoulPJ/assets/97228414/a844e7f4-4320-470b-a726-64e9956581a2">
 </div>
 
-현재 메인페이지만 구현이 가능합니다.
+- 현재 메인페이지만 구현이 가능합니다.
 
 
 개발 툴
